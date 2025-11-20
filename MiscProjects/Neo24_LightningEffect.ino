@@ -1,21 +1,3 @@
-/*
-################################################################################
-# File Name:             Neo24_LightningEffect.ino                                             
-# Board:                 Arduino Nano        
-# Programming Language:	 Wiring / C /Processing / Arduino IDE          
-#						
-# Objective:             Code made for Neo Pixel Ring 24, XXXXXXXXXXX Project
-#										  
-# Operation:	           Display lightning strike/storm effect
-#			
-# Author:                Calder - CalderCatLabs 
-# Date:                  November 18th, 2025					
-################################################################################
-Note: When uploading to Arduino Nano Every, the following error may be encountered: 
-avrdude: jtagmkII_initialize(): Cannot locate "flash" and "boot" memories in description
-This  is often a spurious warning (not an error) which can be safely ignored.
- */
-
 #include <Adafruit_NeoPixel.h>
 
 #define PIN        6
@@ -140,11 +122,11 @@ void superStrike() {
 
   fadeOut(random(3000, 5000));
 
-  rollingThunder();
+  //rollingThunder();
 
   if (random(100) < 60) { // echo chance
     delay(random(500, 1500));
-    rollingThunder(true);
+    //rollingThunder(true);
   }
 
   delay(random(800, 1500));
@@ -161,7 +143,7 @@ void backgroundFlicker() {
 }
 
 //Rolling thunder wave
-void rollingThunder(bool echo) {
+/*void rollingThunder(bool echo) {
   int waveBrightness = echo ? 20 : 40;
   int delayPerStep   = 80;
 
@@ -186,4 +168,4 @@ void rollingThunder(bool echo) {
 
   lightningStrip.clear();
   lightningStrip.show();
-}
+}*/
