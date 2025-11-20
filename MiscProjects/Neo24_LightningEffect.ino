@@ -60,7 +60,7 @@ void loop() {
   }
 }
 
-// ⚡ Lightning effect simulation
+//Lightning effect simulation
 void lightningEffect() {
   if (random(100) < 2) { // 2% chance super strike
     superStrike();
@@ -95,7 +95,7 @@ void lightningEffect() {
   fadeOut(random(2000, 4000)); // fade 2–4s
 }
 
-// 🌫️ Fade out
+//Fade out
 void fadeOut(int fadeTimeMs) {
   const int steps = 50;
   for (int s = steps; s >= 0; s--) {
@@ -126,7 +126,7 @@ void fadeOut(int fadeTimeMs) {
   lightningStrip.show();
 }
 
-// ⚡ Super strike
+//Super strike
 void superStrike() {
   int brightness = 180;
   uint32_t color = randomLightningColor(brightness);
@@ -150,7 +150,7 @@ void superStrike() {
   delay(random(800, 1500));
 }
 
-// 🌌 Background flicker
+//Background flicker
 void backgroundFlicker() {
   int flicker = random(5, 20);
   for (int i = 0; i < NUMPIXELS; i++) {
@@ -160,7 +160,7 @@ void backgroundFlicker() {
   delay(random(50, 150));
 }
 
-// 🌩️ Rolling thunder wave
+//Rolling thunder wave
 void rollingThunder(bool echo) {
   int waveBrightness = echo ? 20 : 40;
   int delayPerStep   = 80;
